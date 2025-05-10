@@ -11,7 +11,9 @@ const db = new Low(new JSONFile('db.json'), { musicData: {} });
 await db.read();
 
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: 'https://fridaysjam.com'
+}));
 app.use(express.json());
 
 // Test route
