@@ -12,6 +12,10 @@ const db = new Low(adapter);
 
 // Read the data file (or create it if not exists)
 await db.read();
+if (!db.data) {
+  db.data = { musicData: {} };
+  await db.write();
+}
 
 // If the file is empty, initialize with default structure
 if (!db.data) {
