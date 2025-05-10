@@ -2,19 +2,25 @@ import express from 'express';
 import cors from 'cors';
 import { Low } from 'lowdb';
 import { JSONFile } from 'lowdb/node';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Set up lowdb
-const adapter = new JSONFile('db.json');
-const db = new Low(adapter);
+// Compute /tmp/db.json path (Render's writable directory)
+const dbFilePath = '/tmp/db.json';
+
+// Set up Lowdb with default data
+const adapter = new JSONFile(dbFilePath);
+const db = new Low(adapter, { musicData: {} });
 
 await db.read();
 if (!db.data) {
   db.data = { musicData: {} };
   await db.write();
 }
+
 
 // Middleware
 app.use(cors());
