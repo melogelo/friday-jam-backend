@@ -6,30 +6,23 @@ import { JSONFile } from 'lowdb/node';
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Set up lowdb with JSON file
+// Set up lowdb
 const adapter = new JSONFile('db.json');
 const db = new Low(adapter);
 
-// Read the data file (or create it if not exists)
 await db.read();
 if (!db.data) {
   db.data = { musicData: {} };
   await db.write();
 }
 
-// If the file is empty, initialize with default structure
-if (!db.data) {
-  db.data = { musicData: {} };
-  await db.write(); // Save it
-}
-
 // Middleware
 app.use(cors());
 app.use(express.json());
 
-// Health check
+// Test route
 app.get('/', (req, res) => {
-  res.send('Backend is up and running');
+  res.send('Admin panel is running!');
 });
 
 // Save/update music data
@@ -46,5 +39,5 @@ app.get('/music', (req, res) => {
 
 // Start server
 app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+  console.log(`Server is running at http://localhost:${PORT}`);
 });
