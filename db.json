@@ -1,0 +1,8 @@
+{
+  "musicData": {
+    "topPick": "<iframe style=\"border-radius:12px\" src=\"https://open.spotify.com/embed/track/2M20XMZy2XmRpYE2aNQhZR?utm_source=generator\" width=\"100%\" height=\"352\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\"></iframe>",
+    "runnerUp": "<iframe style=\"border-radius:12px\" src=\"https://open.spotify.com/embed/track/6gfWrVliEr8QTx0Ai0k5NW?utm_source=generator\" width=\"100%\" height=\"352\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\"></iframe>",
+    "honorableMention": "<iframe style=\"border-radius:12px\" src=\"https://open.spotify.com/embed/track/2uvE4L5ZsYKpv8hbK4TIOt?utm_source=generator\" width=\"100%\" height=\"352\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\"></iframe>",
+    "playlist": "<iframe style=\"border-radius:12px\" src=\"https://open.spotify.com/embed/playlist/7g3VVo248wwOJrz2n3Cman?utm_source=generator\" width=\"100%\" height=\"352\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\" loading=\"lazy\"></iframe>"
+  }
+}
