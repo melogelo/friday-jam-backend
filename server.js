@@ -7,8 +7,9 @@ const app = express();
 const PORT = 3000;
 
 // Set up lowdb with default data
-const db = new Low(new JSONFile('db.json'), { musicData: {} });
+const db = new Low(new JSONFile('db.json'));
 await db.read();
+db.data ||= { musicData: {} };
 
 // Middleware
 app.use(cors({
